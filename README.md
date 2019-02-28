@@ -6,16 +6,15 @@ The features out the box include:
 - [Metalsmith](https://metalsmith.io/) static site generator - preconfigured with extra features:
   - [Nunjucks](https://mozilla.github.io/nunjucks/) templates
   - [Markdown](https://en.wikipedia.org/wiki/Markdown) content
-  - Beautified HTML output
+  - Beautified or minified HTML output depending on environment
   - Site Map
-  - Simple publishing (draft status)
+  - Simple publishing control (draft status)
 - [Gulp](https://gulpjs.com/) build system
-  - [Browsersync](https://www.browsersync.io/) to watche for changes and serve a dev site
-  - Minify js scripts
-  - SASS compilation
-- Basic accessibility testing
-- Basic smoke testing
-- Linting
+  - [Browsersync](https://www.browsersync.io/) to watch for changes and serve a dev site
+  - JS scripts linting, rollup and minification
+  - SASS compilation and minification
+- [pa11y](http://pa11y.org/) accessibility testing
+- [Todo]() smoke testing
 
 ## Requirements
 
@@ -46,3 +45,9 @@ There are three ways to build and run the website:
 Local hosting is at http://localhost:8080 and a browser window should open automatically.
 
 Distribution goes into `./dist`.
+
+## Deployment
+
+Serve the `dist/` folder using your choice of platform.
+
+Preferably hook up continuous deployment. Your CI system should run `npm run build` before deploying the `dist/` folder.
