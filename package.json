@@ -48,6 +48,7 @@
     "jstransformer-nunjucks": "^0.5.0",
     "metalsmith": "^2.3.0",
     "metalsmith-beautify": "^0.2.0",
+    "metalsmith-drafts": "^0.1.0",
     "metalsmith-frontmatter-file-loader": "^1.0.2",
     "metalsmith-frontmatter-renderer": "^1.0.1",
     "metalsmith-fs-metadata": "github:dw-buildit/metalsmith-fs-metadata",
