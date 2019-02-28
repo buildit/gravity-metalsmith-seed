@@ -1,0 +1,22 @@
+{
+  "clean": false,
+  "source": "pages",
+  "destination": "dist",
+  "plugins": {
+    "metalsmith-fs-metadata": {
+      "config": "./config/site.json"
+    },
+    "lib/metalsmith-build-info.js": true,
+    "metalsmith-frontmatter-file-loader": {
+      "key": "blocks",
+      "suppressNoFilesError": true
+    },
+    "metalsmith-frontmatter-renderer": {
+      "suppressNoFilesError": true
+    },
+    "metalsmith-layouts": true,
+    "metalsmith-beautify": {
+      "preserve_newlines": false
+    }
+  }
+}

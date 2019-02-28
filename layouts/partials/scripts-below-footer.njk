@@ -1,0 +1,12 @@
+<!-- Scripts -->
+<script src="/scripts/bundle.min.js" defer></script>
+{% if site.googleAnalyticsTrackingId %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.googleAnalyticsTrackingId}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{site.googleAnalyticsTrackingId}}', { 'anonymize_ip': true });
+</script>
+{% endif %}
+<!-- End scripts -->

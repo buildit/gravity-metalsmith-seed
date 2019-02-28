@@ -1,0 +1,8 @@
+<main>
+    {% if blocks.main %}
+        {{ blocks.main | safe }}
+    {% else %}
+        {# Fall back to rendering contents #}
+        {{ contents | safe }}
+    {% endif %}
+</main>

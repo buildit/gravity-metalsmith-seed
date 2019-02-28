@@ -1,0 +1,26 @@
+{
+  "local-dev": {
+    "url": "http://localhost:8080",
+    "excludeRobots": true,
+    "site": {
+      "ogType": "test override"
+    }
+  },
+  "local-dev-min": {
+    "url": "http://localhost:8080",
+    "excludeRobots": true,
+    "optimise": true
+  },
+  "staging": {
+    "url": "https://staging",
+    "excludeRobots": true,
+    "googleAnalyticsTrackingId": "",
+    "optimise": true
+  },
+  "production": {
+    "url": "https://production",
+    "excludeRobots": false,
+    "googleAnalyticsTrackingId": "",
+    "optimise": true
+  }
+}

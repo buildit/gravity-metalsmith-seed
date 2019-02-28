@@ -1,0 +1,36 @@
+{% if pageTitle %}{% set title = pageTitle %}{% else %}{% set title = site.title %}{% endif %}
+<meta charset="UTF-8">
+<title>{{ title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="description" content="{{ description }}">
+{% if build.excludeRobots %}
+    <meta name="robots" content="noindex">
+{% else %}
+    {% if metaRobots %}
+        <meta name="robots" content="{{ metaRobots }}">
+    {% endif %}
+{% endif %}
+
+<meta property="og:title" content="{% if site.ogTitle %}{{ site.ogTitle }}{% else %}{{ title }}{% endif %}">
+<meta property="og:description"
+      content="{% if ogDescription %}{{ ogDescription }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:type" content="{{ site.ogType }}">
+<meta property="og:url" content="{{ site.url }}/{% if path %}{{ path }}/{% endif %}">
+<meta property="og:image" content="{{ site.url }}/images/{{ site.ogImage }}">
+<meta property="og:image:alt" content="{{ site.ogImageAlt }}">
+
+<meta name="twitter:card" content="{{ site.twitterCard }}"/>
+<meta name="twitter:site:id" content="{{ site.twitterSiteId }}"/>
+
+<link rel="stylesheet" href="/styles/index.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#051432">
+<meta name="msapplication-TileColor" content="#051432">
+<meta name="theme-color" content="#051432">

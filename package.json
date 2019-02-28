@@ -1,0 +1,63 @@
+{
+  "name": "gravity-metalsmith-shell",
+  "version": "0.0.1",
+  "description": "A minimum set of features to generate metalsmith sites with gravity.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "dev": "gulp",
+    "start": "gulp --env local-dev-min"
+  },
+  "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",
+  "contributors": [
+    "Daniel Wilkinson <daniel.wilkinson@wipro.com>"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
+    "@buildit/gravity-ui-sass": "^0.11.1",
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.1",
+    "critical": "^1.3.4",
+    "del": "^3.0.0",
+    "eyeglass": "^1.5.0",
+    "git-last-commit": "^0.3.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-header": "^2.0.5",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "jstransformer-markdown": "^1.2.1",
+    "jstransformer-nunjucks": "^0.5.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-beautify": "^0.2.0",
+    "metalsmith-frontmatter-file-loader": "^1.0.2",
+    "metalsmith-frontmatter-renderer": "^1.0.1",
+    "metalsmith-fs-metadata": "github:dw-buildit/metalsmith-fs-metadata",
+    "metalsmith-in-place": "^4.2.0",
+    "metalsmith-layouts": "^2.3.0",
+    "metalsmith-metadata": "github:dw-buildit/metalsmith-metadata",
+    "metalsmith-serve": "0.0.7",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-closure-compiler-js": "^1.0.6",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.4.4"
+  },
+  "dependencies": {
+    "metalsmith-debug": "^1.2.0"
+  }
+}
