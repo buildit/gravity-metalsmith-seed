@@ -18,9 +18,9 @@
       content="{% if ogDescription %}{{ ogDescription }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:type" content="{{ site.ogType }}">
-<meta property="og:url" content="{{ site.url }}/{% if path %}{{ path }}/{% endif %}">
 <meta property="og:image" content="{{ site.url }}/images/{{ site.ogImage }}">
 <meta property="og:image:alt" content="{{ site.ogImageAlt }}">
+<meta property="og:url" content="{{ env.url }}/{% if path %}{{ path }}/{% endif %}">
 
 <meta name="twitter:card" content="{{ site.twitterCard }}"/>
 <meta name="twitter:site:id" content="{{ site.twitterSiteId }}"/>

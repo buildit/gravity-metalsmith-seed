@@ -7,6 +7,7 @@
       "config": "./config/site.json"
     },
     "lib/metalsmith-build-info.js": true,
+    "lib/metalsmith-env-info.js": true,
     "metalsmith-frontmatter-file-loader": {
       "key": "blocks",
       "suppressNoFilesError": true
