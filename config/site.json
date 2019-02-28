@@ -1,9 +1,9 @@
 {
   "site": {
-    "title": "Site Title",
-    "description": "Site description",
+    "title": "Metalsmith with Gravity :o",
+    "description": "Metalsmith generated website including Gravity and other Buildit best practises",
     "twitterCard": "summary_large_image",
-    "twitterSiteId": "910173909592485889",
+    "twitterSiteId": "enter-siteId-here",
     "ogType": "website",
     "ogImage": "builidt-default-sharing-img.png",
     "ogImageAlt": "Buildit @ Wipro Digital"

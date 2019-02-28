@@ -2,9 +2,7 @@
   "local-dev": {
     "url": "http://localhost:8080",
     "excludeRobots": true,
-    "site": {
-      "ogType": "test override"
-    }
+    "optimise": false
   },
   "local-dev-min": {
     "url": "http://localhost:8080",

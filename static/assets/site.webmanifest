@@ -1,6 +1,6 @@
 {
-    "name": "gravity-metalsmith-shell",
-    "short_name": "site with gravity",
+    "name": "Metalsmith with gravity",
+    "short_name": "Metalsmith with gravity",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
