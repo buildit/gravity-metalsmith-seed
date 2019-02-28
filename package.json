@@ -57,6 +57,7 @@
     "metalsmith-layouts": "^2.3.0",
     "metalsmith-mapsite": "^1.0.6",
     "metalsmith-metadata": "github:dw-buildit/metalsmith-metadata",
+    "metalsmith-path": "^0.3.1",
     "metalsmith-serve": "0.0.7",
     "minimist": "^1.2.0",
     "pa11y-ci": "^2.1.1",

@@ -6,6 +6,10 @@
     "metalsmith-fs-metadata": {
       "config": "./config/site.json"
     },
+    "metalsmith-path": {
+      "directoryIndex": "/index.html",
+      "extensions": [".html"]
+    },
     "lib/metalsmith-build-info.js": true,
     "lib/metalsmith-env-info.js": true,
     "metalsmith-frontmatter-file-loader": {
