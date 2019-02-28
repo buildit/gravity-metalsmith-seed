@@ -3,6 +3,7 @@
 This shell can be used as a base to quickly create your own site.
 
 The features out the box include:
+- Proud consumer of [Gravity](https://github.com/buildit/gravity-ui-sass)
 - [Metalsmith](https://metalsmith.io/) static site generator - preconfigured with extra features:
   - [Nunjucks](https://mozilla.github.io/nunjucks/) templates
   - [Markdown](https://en.wikipedia.org/wiki/Markdown) content
