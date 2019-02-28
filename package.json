@@ -47,6 +47,7 @@
     "metalsmith-frontmatter-file-loader": "^1.0.2",
     "metalsmith-frontmatter-renderer": "^1.0.1",
     "metalsmith-fs-metadata": "github:dw-buildit/metalsmith-fs-metadata",
+    "metalsmith-html-minifier": "^3.0.3",
     "metalsmith-in-place": "^4.2.0",
     "metalsmith-layouts": "^2.3.0",
     "metalsmith-metadata": "github:dw-buildit/metalsmith-metadata",

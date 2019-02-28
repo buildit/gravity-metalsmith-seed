@@ -17,6 +17,11 @@
     "metalsmith-layouts": true,
     "metalsmith-beautify": {
       "preserve_newlines": false
+    },
+    "lib/metalsmith-html-minifier-optimise.js": {
+      "minifierOptions": {
+        "removeComments": false
+      }
     }
   }
 }
