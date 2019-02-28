@@ -34,147 +34,147 @@ const optimise = envs.shouldOptimise();
 // Output build and env info to aid with debugging
 // - especially for Travis CI builds
 function printProps(obj) {
-    let output = "{\n";
-    Object.keys(obj).forEach(key => {
-        output += `  ${chalk.cyan(key)}: ${chalk.magentaBright(obj[key])}\n`;
-    });
-    output += "}";
-    return output;
+  let output = "{\n";
+  Object.keys(obj).forEach(key => {
+    output += `  ${chalk.cyan(key)}: ${chalk.magentaBright(obj[key])}\n`;
+  });
+  output += "}";
+  return output;
 }
 
 function printBuildInfo() {
-    return getBuildInfo().then(buildInfo => {
-        console.log(chalk`
+  return getBuildInfo().then(buildInfo => {
+    console.log(chalk`
 
 {bold.whiteBright Environment config:}
 ${printProps(envs.getCurrentEnvInfo())}
 
 {bold.whiteBright Optimisations:} ${
-            optimise ? chalk.greenBright("ENABLED") : chalk.redBright("DISABLED")
-            }
+      optimise ? chalk.greenBright("ENABLED") : chalk.redBright("DISABLED")
+    }
 
 {bold.whiteBright Build info:}
 ${printProps(buildInfo)}
 
 `);
-    });
+  });
 }
 
 const sassOptions = {
-    eyeglass: {}
+  eyeglass: {}
 };
 
 // Compile all required styles
 function styles(done) {
-    getBuildInfo().then(bldInfo => {
-        gulp
-            .src(paths.styles.src)
-            .pipe(sass(eyeglass(sassOptions)).on("error", sass.logError))
-            .pipe(
-                autoprefixer({
-                    browsers: ["last 2 versions"],
-                    cascade: false
-                })
-            )
-            .pipe(
-                csso({
-                    restructure: optimise,
-                    debug: !optimise
-                })
-            )
-            .pipe(header(`/* ${bldInfo.description} ${bldInfo.commitShortHash} */`))
-            .pipe(gulp.dest(paths.styles.dest))
-            .on("finish", () => {
-                done();
-            });
-    });
+  getBuildInfo().then(bldInfo => {
+    gulp
+      .src(paths.styles.src)
+      .pipe(sass(eyeglass(sassOptions)).on("error", sass.logError))
+      .pipe(
+        autoprefixer({
+          browsers: ["last 2 versions"],
+          cascade: false
+        })
+      )
+      .pipe(
+        csso({
+          restructure: optimise,
+          debug: !optimise
+        })
+      )
+      .pipe(header(`/* ${bldInfo.description} ${bldInfo.commitShortHash} */`))
+      .pipe(gulp.dest(paths.styles.dest))
+      .on("finish", () => {
+        done();
+      });
+  });
 }
 
 // Grab static assets (fonts, etc.) and move them to the build folder
 // No file mangling should be done in this directory
 function assets() {
-    return gulp
-        .src(paths.assets.src, { dot: true })
-        .pipe(gulp.dest(paths.assets.dest))
-        .pipe(size());
+  return gulp
+    .src(paths.assets.src, { dot: true })
+    .pipe(gulp.dest(paths.assets.dest))
+    .pipe(size());
 }
 
 function clean(done) {
-    del(paths.dest);
-    done();
+  del(paths.dest);
+  done();
 }
 
 function imageOptim() {
-    return gulp
-        .src(paths.images.src)
-        .pipe(
-            gulpIf(
-                optimise,
-                imagemin([
-                    imageminMozjpeg({ quality: 85 }),
-                    imageminPngquant({ quality: [0.65, 0.8] }),
-                    imageminSvgo({ plugins: [{ removeViewBox: false }] })
-                ])
-            )
-        )
-        .pipe(gulp.dest(paths.images.dest));
+  return gulp
+    .src(paths.images.src)
+    .pipe(
+      gulpIf(
+        optimise,
+        imagemin([
+          imageminMozjpeg({ quality: 85 }),
+          imageminPngquant({ quality: [0.65, 0.8] }),
+          imageminSvgo({ plugins: [{ removeViewBox: false }] })
+        ])
+      )
+    )
+    .pipe(gulp.dest(paths.images.dest));
 }
 
 function metalsmithBuild() {
-  return run('npx metalsmith').exec();
+  return run("npx metalsmith").exec();
 }
 
 function watch(done) {
-    gulp.watch(
-        paths.scripts.modules,
-        gulp.series(scripts.bundle, browserSync.reload)
-    );
-    gulp.watch(
-        paths.styles.src,
-        gulp.series(styles, criticalCss, browserSync.reloadCSS)
-    );
-    gulp.watch(paths.images.src, gulp.series(imageOptim, browserSync.reload));
-    gulp.watch(paths.assets.src, gulp.series(assets, browserSync.reload));
-    gulp.watch(
-        [paths.pages.src, paths.layouts.src],
-        gulp.series(metalsmithBuild, criticalCss, browserSync.reload)
-    );
-    done();
+  gulp.watch(
+    paths.scripts.modules,
+    gulp.series(scripts.bundle, browserSync.reload)
+  );
+  gulp.watch(
+    paths.styles.src,
+    gulp.series(styles, criticalCss, browserSync.reloadCSS)
+  );
+  gulp.watch(paths.images.src, gulp.series(imageOptim, browserSync.reload));
+  gulp.watch(paths.assets.src, gulp.series(assets, browserSync.reload));
+  gulp.watch(
+    [paths.pages.src, paths.layouts.src],
+    gulp.series(metalsmithBuild, criticalCss, browserSync.reload)
+  );
+  done();
 }
 
 function criticalCss() {
-    return gulp
-        .src("dist/**/*.html")
-        .pipe(
-            gulpIf(
-                optimise,
-                critical({
-                    base: "dist/",
-                    inline: true,
-                    css: ["dist/styles/style.css"],
-                    ignore: ["@font-face", /url\(/]
-                })
-            )
-        )
-        .on("error", function(err) {
-            console.error(err.message);
+  return gulp
+    .src("dist/**/*.html")
+    .pipe(
+      gulpIf(
+        optimise,
+        critical({
+          base: "dist/",
+          inline: true,
+          css: ["dist/styles/style.css"],
+          ignore: ["@font-face", /url\(/]
         })
-        .pipe(gulp.dest("dist"));
+      )
+    )
+    .on("error", function(err) {
+      console.error(err.message);
+    })
+    .pipe(gulp.dest("dist"));
 }
 
 gulp.task("clean", clean);
 
 // registering main tasks
 gulp.task(
-    "build",
+  "build",
 
-    gulp.series(
-        "clean",
-        printBuildInfo,
-        metalsmithBuild,
-        gulp.parallel(assets, imageOptim, styles, scripts.bundle),
-        criticalCss
-    )
+  gulp.series(
+    "clean",
+    printBuildInfo,
+    metalsmithBuild,
+    gulp.parallel(assets, imageOptim, styles, scripts.bundle),
+    criticalCss
+  )
 );
 
 gulp.task("default", gulp.series("build", browserSync.initTask, watch));

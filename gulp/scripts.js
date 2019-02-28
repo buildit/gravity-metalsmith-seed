@@ -1,5 +1,4 @@
 const path = require("path");
-const gulp = require("gulp");
 const gulpIf = require("gulp-if");
 const rollup = require("rollup");
 const babel = require("rollup-plugin-babel");

@@ -18,7 +18,7 @@ module.exports = {
   currentEnv: options.env,
 
   shouldOptimise: function() {
-    return this.getCurrentEnvInfo().optimise || false;
+    return this.getCurrentEnvInfo()["optimise"] || false;
   },
 
   getEnvInfo: function(env) {
