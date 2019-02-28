@@ -177,6 +177,4 @@ gulp.task(
     )
 );
 
-gulp.task("abc", gulp.series(watch));
-
 gulp.task("default", gulp.series("build", browserSync.initTask, watch));
