@@ -1,10 +1,4 @@
 {% if not title %}{% set title = config.site.title %}{% endif %}
-{% if not ogTitle %}{% set ogTitle = pageTitle %}{% endif %}
-{% if not ogDescription %}{% set ogDescription = config.site.description %}{% endif %}
-{% if not ogType %}{% set ogType = config.site.ogType %}{% endif %}
-{% if not ogImage %}{% set ogImage = config.site.ogImage %}{% endif %}
-{% if not ogImageAlt %}{% set ogImageAlt = config.site.ogImageAlt %}{% endif %}
-
 <meta charset="UTF-8">
 <title>{{ title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +13,13 @@
     {% endif %}
 {% endif %}
 
-<meta property="og:title" content="{{ ogTitle }}">
-<meta property="og:description" content="{{ ogDescription }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or config.site.description }}">
 <meta property="og:site_name" content="{{ config.site.title }}">
-<meta property="og:type" content="{{ ogType }}">
+<meta property="og:type" content="{{ ogType or config.site.ogType }}">
 <meta property="og:url" content="{{ env.url }}/{% if path %}{{ path }}/{% endif %}">
-<meta property="og:image" content="{{ env.url }}/images/{{ ogImage }}">
-<meta property="og:image:alt" content="{{ ogImageAlt }}">
+<meta property="og:image" content="{{ env.url }}/images/{{ ogImage or config.site.ogImage }}">
+<meta property="og:image:alt" content="{{ ogImageAlt or config.site.ogImageAlt }}">
 
 <meta name="twitter:card" content="{{ config.site.twitterCard }}"/>
 <meta name="twitter:site:id" content="{{ config.site.twitterSiteId }}"/>
