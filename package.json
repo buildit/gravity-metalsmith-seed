@@ -55,6 +55,7 @@
     "metalsmith-html-minifier": "^3.0.3",
     "metalsmith-in-place": "^4.2.0",
     "metalsmith-layouts": "^2.3.0",
+    "metalsmith-mapsite": "^1.0.6",
     "metalsmith-metadata": "github:dw-buildit/metalsmith-metadata",
     "metalsmith-serve": "0.0.7",
     "minimist": "^1.2.0",

@@ -24,6 +24,9 @@
       "minifierOptions": {
         "removeComments": false
       }
+    },
+    "lib/metalsmith-mapsite-currentenv.js": {
+      "omitIndex": true
     }
   }
 }
