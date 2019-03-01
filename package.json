@@ -8,9 +8,12 @@
     "build": "gulp build",
     "dev": "gulp",
     "start": "gulp --env local-dev-min",
-    "pa11y": "./node_modules/.bin/pa11y-ci --sitemap http://localhost:8080/sitemap.xml",
     "cypress": "cypress run",
-    "test": "npm run cypress; npm run pa11y"
+    "pa11y": "./node_modules/.bin/pa11y-ci --sitemap http://localhost:8080/sitemap.xml",
+    "test": "npm run cypress; npm run pa11y",
+    "eslint": "eslint 'src/scripts/**/*.js'",
+    "stylelint": "stylelint 'src/sass/**/*.scss'",
+    "lint": "npm run eslint && npm run stylelint",
   },
   "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",
   "contributors": [

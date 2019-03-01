@@ -43,6 +43,14 @@ There are three ways to build and run the website:
 - `npm run build` - Generates a minified local build
 - `npm run dev` - Generates a non minified local build and a local server instance
 
+For linting
+
+- `npm run lint` - lints the js and sass within the `.\src` folder
+
+For testing
+
+- `npm run test` - Run the accessibility and smoke tests *Note: a local server needs to be running at port 8080*
+
 Local hosting is at http://localhost:8080 and a browser window should open automatically.
 
 Distribution goes into `./dist`.
