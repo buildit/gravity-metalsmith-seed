@@ -59,4 +59,4 @@ Distribution goes into `./dist`.
 
 Serve the `dist/` folder using your choice of platform.
 
-Preferably hook up continuous deployment. Your CI system should run `npm run build` before deploying the `dist/` folder.
+Preferably hook up continuous deployment. Your CI system should run `npm run ci`; to lint, build and test; before deploying the `dist/` folder.

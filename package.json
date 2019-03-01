@@ -14,6 +14,8 @@
     "eslint": "eslint 'src/scripts/**/*.js'",
     "stylelint": "stylelint 'src/sass/**/*.scss'",
     "lint": "npm run eslint && npm run stylelint",
+    "http-server": "http-server ./dist -c-1 -s",
+    "ci": "npm run lint; npm build; npm run http-server & npm run test"
   },
   "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",
   "contributors": [
@@ -48,6 +50,7 @@
     "gulp-run": "^1.7.1",
     "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
+    "http-server": "^0.11.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
