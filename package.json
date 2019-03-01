@@ -26,6 +26,10 @@
     "url": "git+https://github.com/dw-buildit/gravity-metalsmith-shell.git"
   },
   "license": "ISC",
+  "engines": {
+    "node": ">= 8.10.0",
+    "npm": ">= 5.8.0"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.1.6",
     "@buildit/gravity-ui-sass": "^0.11.1",
@@ -66,15 +70,14 @@
     "metalsmith-in-place": "^4.2.0",
     "metalsmith-layouts": "^2.3.0",
     "metalsmith-mapsite": "^1.0.6",
-    "metalsmith-metadata": "github:dw-buildit/metalsmith-metadata",
     "metalsmith-path": "^0.3.1",
     "metalsmith-serve": "0.0.7",
     "minimist": "^1.2.0",
     "pa11y-ci": "^2.1.1",
     "prettier": "^1.16.4",
-    "rollup": "^1.1.0",
+    "rollup": "^1.4.0",
     "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-closure-compiler-js": "^1.0.6",
+    "rollup-plugin-closure-compiler-js": "github:dw-buildit/rollup-plugin-closure-compiler-js",
     "rollup-plugin-node-resolve": "^4.0.0",
     "stylelint": "^9.9.0",
     "stylelint-config-sass-guidelines": "^5.3.0",
