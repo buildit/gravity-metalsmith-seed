@@ -1,7 +1,7 @@
 # TODO
 -[x] pa11y
 -[ ] some more interesting starter pages
--[ ] smoke tests
--[ ] `npm run tests`
+-[x] smoke tests
+-[x] `npm run test`
 -[ ] `npm run ci` for CI environments (or different build tasks for different envs)
 -[ ] list of things opinionated about 
