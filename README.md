@@ -8,14 +8,14 @@ The features out the box include:
   - [Nunjucks](https://mozilla.github.io/nunjucks/) templates
   - [Markdown](https://en.wikipedia.org/wiki/Markdown) content
   - Beautified or minified HTML output depending on environment
-  - Site Map
+  - Sitemap
   - Simple publishing control (draft status)
 - [Gulp](https://gulpjs.com/) build system
   - [Browsersync](https://www.browsersync.io/) to watch for changes and serve a dev site
   - JS scripts linting, rollup and minification
   - SASS compilation and minification
-- [pa11y](http://pa11y.org/) accessibility testing
-- [Todo]() smoke testing
+- [pa11y](http://pa11y.org/) accessibility tests
+- [Cypress](https://www.cypress.io/) smoke tests
 
 ## Requirements
 
