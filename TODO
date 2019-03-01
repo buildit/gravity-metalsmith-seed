@@ -1,5 +1,5 @@
 # TODO
--[ ] pa11y
+-[x] pa11y
 -[ ] some more interesting starter pages
 -[ ] smoke tests
 -[ ] `npm run tests`

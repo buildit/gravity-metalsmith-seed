@@ -7,7 +7,8 @@
     "clean": "gulp clean",
     "build": "gulp build",
     "dev": "gulp",
-    "start": "gulp --env local-dev-min"
+    "start": "gulp --env local-dev-min",
+    "pa11y": "./node_modules/.bin/pa11y-ci --sitemap http://localhost:8080/sitemap.xml",
   },
   "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",
   "contributors": [
