@@ -61,14 +61,14 @@ The smoke tests check that the build process hasn't broken and that the required
 
 You can run the tests separately:
 
-- `npm run test` - Run the accessibility and smoke tests *Note: a local server needs to be running at port 8080 so make sure the local development server is running before using this command.*
+- `npm run test` - Run the accessibility and smoke tests. *Note: these test look for a website at `http://localhost:8080` so make sure the local development server is running before using this command.*
 
 Local hosting is at http://localhost:8080 and a browser window should open automatically.
 
-Distribution goes into `./dist`.
-
 ## Deployment
 
-Serve the `dist/` folder using your choice of platform.
+The website is built to the `dist/` folder. You should host the contents of this folder using your choice of platform.
 
-Preferably hook up continuous deployment. Your CI system should run `npm run ci`; to lint, build and test; before deploying the `dist/` folder.
+Preferably hook up continuous deployment. Your CI system should run `npm run ci`; to build, lint and test; before deploying the `dist/` folder.
+
+*Note that your CI system of choice should also run a local webserver before running these tests. You can use `npm run http-server` to do this - your CI system should have documentation on where to run this command.*  
