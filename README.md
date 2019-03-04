@@ -42,7 +42,7 @@ Unzip them into your project directory and install the dependencies by running:
 
     $ npm install
 
-## Build, Development & Testing
+### Build, Development & Testing
 
 To use the live-reloading development site you need to build your project using one of the following commands:
 - `npm start` - Generates a minified local build and a local server instance
@@ -65,7 +65,7 @@ You can run the tests separately:
 
 Local hosting is at http://localhost:8080 and a browser window should open automatically.
 
-## Deployment
+### Deployment
 
 The website is built to the `dist/` folder. You should host the contents of this folder using your choice of platform.
 
