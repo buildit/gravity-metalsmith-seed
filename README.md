@@ -1,4 +1,4 @@
-# Gravity & Metalsmith Shell - [![Build Status](https://travis-ci.org/dw-buildit/gravity-metalsmith-shell.svg?branch=master)](https://travis-ci.org/dw-buildit/gravity-metalsmith-shell)
+# Gravity & Metalsmith Shell - [![Build Status](https://travis-ci.org/buildit/gravity-metalsmith-shell.svg?branch=master)](https://travis-ci.org/buildit/gravity-metalsmith-shell)
 
 This shell can be used as a base to quickly create your own static site with [Gravity](https://github.com/buildit/gravity-ui-sass).
 
@@ -36,7 +36,7 @@ and before running any other npm command, run
 ### Installation
 
 Most of the time you will want to take a copy of this code base and use it as a starting point within your own project.
-The simplest way of doing this would be to [download the source files from github](https://github.com/dw-buildit/gravity-metalsmith-shell/archive/master.zip).
+The simplest way of doing this would be to [download the source files from github](https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip).
 
 Unzip them into your project directory and install the dependencies by running:
 
