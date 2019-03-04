@@ -15,7 +15,7 @@
     "stylelint": "stylelint 'src/sass/**/*.scss'",
     "lint": "npm run eslint && npm run stylelint",
     "http-server": "http-server ./dist -c-1 -s &",
-    "preci": "npm build && npm run http-server",
+    "preci": "npm build",
     "ci": "npm run lint && npm run test"
   },
   "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",

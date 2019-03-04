@@ -1,2 +1,5 @@
 language: node_js
 script: npm run ci
+before_script:
+  - npm run http-server
+  - sleep 5
