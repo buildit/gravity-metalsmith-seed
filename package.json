@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "gulp clean",
     "build": "gulp build",
+    "build-min": "gulp build --env local-dev-min",
     "dev": "gulp",
     "start": "gulp --env local-dev-min",
     "cypress": "cypress run",
@@ -15,7 +16,7 @@
     "stylelint": "stylelint 'src/sass/**/*.scss'",
     "lint": "npm run eslint && npm run stylelint",
     "http-server": "http-server ./dist -c-1 -s &",
-    "ci": "npm run build --env local-dev-min && npm run lint && npm run test"
+    "ci": "npm run build-min && npm run lint && npm run test"
   },
   "author": "Buildit @ Wipro Digital (https://buildit.wiprodigital.com)",
   "contributors": [
