@@ -1,7 +1,6 @@
-# Gravity + Metalsmith Shell
+# Gravity & Metalsmith Shell - [![Build Status](https://travis-ci.org/dw-buildit/gravity-metalsmith-shell.svg?branch=master)](https://travis-ci.org/dw-buildit/gravity-metalsmith-shell)
 
 This shell can be used as a base to quickly create your own static site with [Gravity](https://github.com/buildit/gravity-ui-sass).
-
 
 ## Features
 
