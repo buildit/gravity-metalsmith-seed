@@ -157,7 +157,7 @@ function criticalCss() {
         critical({
           base: "dist/",
           inline: true,
-          css: ["dist/styles/style.css"],
+          css: ["dist/styles/index.css"],
           ignore: ["@font-face", /url\(/]
         })
       )
