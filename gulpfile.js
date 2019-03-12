@@ -136,7 +136,7 @@ function watch(done) {
   gulp.watch(paths.images.src, gulp.series(imageOptim, browserSync.reload));
   gulp.watch(paths.assets.src, gulp.series(assets, browserSync.reload));
   gulp.watch(
-    [paths.pages.src, paths.layouts.src, paths.configs.src, "metalsmith.json"],
+    [paths.pages.src, paths.layouts.src, paths.configs.src, paths.content.src, "metalsmith.json"],
     gulp.series(
       "clean",
       metalsmithBuild,

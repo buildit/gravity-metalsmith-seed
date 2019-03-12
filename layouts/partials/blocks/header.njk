@@ -2,4 +2,8 @@
     <header>
         {{ blocks.header | safe }}
     </header>
+{% else %}
+  <header>
+    {% include "default/header.njk" %}
+  </header>
 {% endif %}

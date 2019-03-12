@@ -1,5 +1,9 @@
 {% if blocks.footer %}
-<footer>
+  <footer>
     {{ blocks.footer | safe }}
-</footer>
+  </footer>
+{% else %}
+  <footer>
+    {% include "default/footer.njk" %}
+  </footer>
 {% endif %}
