@@ -121,7 +121,7 @@ function imageOptim() {
 }
 
 function metalsmithBuild() {
-  return run("npx metalsmith").exec();
+  return run("npx ./metalsmith.js").exec();
 }
 
 function watch(done) {
@@ -136,7 +136,7 @@ function watch(done) {
   gulp.watch(paths.images.src, gulp.series(imageOptim, browserSync.reload));
   gulp.watch(paths.assets.src, gulp.series(assets, browserSync.reload));
   gulp.watch(
-    [paths.pages.src, paths.layouts.src, paths.configs.src, paths.content.src, "metalsmith.json"],
+    [paths.pages.src, paths.layouts.src, paths.configs.src, paths.content.src, "metalsmith.js"],
     gulp.series(
       "clean",
       metalsmithBuild,
