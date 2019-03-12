@@ -2,7 +2,9 @@
     basic-page.njk
 
     A basic page layout which has blocks for header, body and footer.
-    Should be used for simple content pages.
+    Should be used for most pages.
+
+    When creating new page layouts ensure you know why you're adding/removing these includes.
 #}
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
@@ -14,6 +16,7 @@
 {% include "partials/blocks/main.njk" %}
 {% include "partials/blocks/footer.njk" %}
 {% include "partials/scripts-below-footer.njk" %}
+{% include "partials/gravity-svg-symbols.njk" %}
 <!-- Build: {{build.description or 'undefined'}} -->
 </body>
 </html>

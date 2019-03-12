@@ -10,11 +10,16 @@ var beautify = require("metalsmith-beautify");
 var drafts = require("metalsmith-drafts");
 var htmlMinifierOptimise = require("./lib/metalsmith-html-minifier-optimise");
 var mapsiteCurrentenv = require("./lib/metalsmith-mapsite-currentenv");
+const gravity = require("@buildit/gravity-ui-sass");
+const fs = require("fs");
 
 Metalsmith(__dirname)
   .source("./pages")
   .destination("./dist")
   .clean(false)
+  .metadata({
+    gravitySvgContents: fs.readFileSync(gravity.bldSvgSymbolsFilePath, "utf8")
+  })
   .use(
     fsMetadata({
       config: "./config/site.json"
