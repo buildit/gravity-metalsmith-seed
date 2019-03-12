@@ -43,7 +43,10 @@ Metalsmith(__dirname)
     frontmatterRenderer({
       key: "blocks-md",
       out: "blocks",
-      suppressNoFilesError: true
+      suppressNoFilesError: true,
+      options: {
+        html: true
+      }
     })
   )
   .use(
