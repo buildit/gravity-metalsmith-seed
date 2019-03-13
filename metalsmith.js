@@ -4,6 +4,7 @@ const fsMetadata = require("metalsmith-fs-metadata");
 const path = require("metalsmith-path");
 const buildInfo = require("./lib/metalsmith-build-info");
 const envInfo = require("./lib/metalsmith-env-info");
+const collections = require("metalsmith-collections");
 const frontmatterFileLoader = require("metalsmith-frontmatter-file-loader");
 const frontmatterRenderer = require("metalsmith-frontmatter-renderer");
 const layouts = require("metalsmith-layouts");
@@ -33,6 +34,7 @@ ms.source("./pages")
   )
   .use(buildInfo())
   .use(envInfo())
+  .use(collections())
   .use(
     frontmatterFileLoader({
       key: "blocks-md",
