@@ -1,4 +1,5 @@
 const Metalsmith = require("metalsmith");
+const ms = Metalsmith(__dirname);
 const fsMetadata = require("metalsmith-fs-metadata");
 const path = require("metalsmith-path");
 const buildInfo = require("./lib/metalsmith-build-info");
@@ -13,8 +14,7 @@ const mapsiteCurrentenv = require("./lib/metalsmith-mapsite-currentenv");
 const gravity = require("@buildit/gravity-ui-sass");
 const fs = require("fs");
 
-Metalsmith(__dirname)
-  .source("./pages")
+ms.source("./pages")
   .destination("./dist")
   .clean(false)
   .metadata({
