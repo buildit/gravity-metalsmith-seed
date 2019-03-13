@@ -2,23 +2,41 @@
   "local-dev": {
     "url": "http://localhost:8080",
     "excludeRobots": true,
-    "optimise": false
+    "optimise": false,
+    "gtm": {
+      "containerId": "GTM-5HD3WXB",
+      "authId": "UZwrBZ2wxRUy5NTsN5397A",
+      "previewId": "env-5"
+    }
   },
   "local-dev-min": {
     "url": "http://localhost:8080",
     "excludeRobots": true,
-    "optimise": true
+    "optimise": true,
+    "gtm": {
+      "containerId": "",
+      "authId": "",
+      "previewId": ""
+    }
   },
   "staging": {
     "url": "https://staging",
     "excludeRobots": true,
-    "googleAnalyticsTrackingId": "",
-    "optimise": true
+    "optimise": true,
+    "gtm": {
+      "containerId": "",
+      "authId": "",
+      "previewId": ""
+    }
   },
   "production": {
     "url": "https://production",
     "excludeRobots": false,
-    "googleAnalyticsTrackingId": "",
-    "optimise": true
+    "optimise": true,
+    "gtm": {
+      "containerId": "",
+      "authId": "",
+      "previewId": ""
+    }
   }
 }
