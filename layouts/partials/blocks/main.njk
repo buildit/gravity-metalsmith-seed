@@ -1,10 +1,10 @@
 <main>
-  <div class="grav-o-container">
+  <section class="grav-o-container">
     {% if blocks.main %}
         {{ blocks.main | safe }}
     {% else %}
         {# Fall back to rendering contents #}
         {{ contents | safe }}
     {% endif %}
-  </div>
+  </section>
 </main>
