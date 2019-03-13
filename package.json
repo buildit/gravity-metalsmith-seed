@@ -1,6 +1,6 @@
 {
   "name": "gravity-metalsmith-shell",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An \"opinionated minimum\" set of features to generate metalsmith sites with gravity.",
   "main": "index.js",
   "scripts": {
