@@ -28,6 +28,37 @@ next section but all you need to know is that once installed you will need to en
 preinstalled on mac) which start with the word `npm`. Those commands start different processes which you will need to
 develop and run your site.
 
+## Installation
+Some information on installing the dependencies and using npm commands.
+- Install
+  - Node JS
+    - Using NVM
+    - Using a package
+
+## Running the site
+- What it means to run the site locally
+- How to run the site locally
+
+## Making changes
+### Change the site's name and config
+- Steps to change the site's name and configuration
+### Create a new page
+- Steps to create a new page
+  - Create html file in `pages/` folder
+  - Linking to block content within frontmatter
+### Add images and other content
+- Steps to add static assets and images
+- Steps to add markdown content
+
+## Publishing the site (Deployment)
+- What you need to deploy
+- (?) Best practises such as CI/CD
+
+## Where to go from here
+- Further reading
+- Other topics that might be important
+- How to get help
+
 [tech docs]: tech.md
 [gravity home]: https://github.com/buildit/gravity-ui-sass
 [metalsmith home]: https://metalsmith.io/
