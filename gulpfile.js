@@ -121,7 +121,7 @@ function imageOptim() {
 }
 
 function metalsmithBuild() {
-  return run("npx ./metalsmith.js").exec();
+  return run(`npx ./metalsmith.js --env ${envs.currentEnv}`).exec();
 }
 
 function watch(done) {
