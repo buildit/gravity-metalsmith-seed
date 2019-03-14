@@ -7,6 +7,7 @@ const envInfo = require("./lib/metalsmith-env-info");
 const collections = require("metalsmith-collections");
 const frontmatterFileLoader = require("metalsmith-frontmatter-file-loader");
 const frontmatterRenderer = require("metalsmith-frontmatter-renderer");
+const inPlace = require("metalsmith-in-place");
 const layouts = require("metalsmith-layouts");
 const beautify = require("metalsmith-beautify");
 const drafts = require("metalsmith-drafts");
@@ -62,6 +63,11 @@ ms.source("./pages")
       key: "blocks-njk",
       out: "blocks",
       ext: "njk",
+      suppressNoFilesError: true
+    })
+  )
+  .use(
+    inPlace({
       suppressNoFilesError: true
     })
   )

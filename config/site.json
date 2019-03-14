@@ -1,7 +1,8 @@
 {
   "site": {
-    "title": "Metalsmith with Gravity :o",
-    "description": "Metalsmith generated website including Gravity and other Buildit best practises",
+    "title": "Gravity and Metalsmith Shell",
+    "shortTitle": "Gravity and Metalsmith",
+    "description": "Metalsmith generated website; including Gravity and other Buildit best practises",
     "twitterCard": "summary_large_image",
     "twitterSiteId": "enter-siteId-here",
     "ogType": "website",
