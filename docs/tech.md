@@ -69,3 +69,8 @@
 - Layouts folder
 - Content folder
 - Static folder
+  - Icons
+- Google Tag Manager
+  - What
+  - Why
+  

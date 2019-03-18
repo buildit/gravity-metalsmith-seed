@@ -1,7 +1,10 @@
 # TODO
 -[x] pa11y
--[ ] some more interesting starter pages
+-[x] some more interesting starter pages
 -[x] smoke tests
 -[x] `npm run test`
 -[x] `npm run ci` for CI environments (or different build tasks for different envs)
--[ ] list of things opinionated about 
+-[ ] list of things opinionated about
+-[ ] getting started guide 
+-[ ] Generator
+-[ ] Image/Icon generation
