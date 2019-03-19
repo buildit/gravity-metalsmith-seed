@@ -62,9 +62,6 @@ to change folder in Terminal (or check which folder you're in) see
 [this article](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html).
 
 ## Running the site on your machine
-- What it means to run the site locally
-- How to run the site locally
-
 Running the site on your machine allows you to check that it is functioning as you expect before you publish it to
 whatever platform your audience will view it on.
 
@@ -83,6 +80,28 @@ refresh the page it will show:
 ## Making changes
 ### Change the site's name and config
 - Steps to change the site's name and configuration
+
+The first steps you might want to take are to change the generated site's name and some other basic configuration.
+
+This is stored in a `.json` file. Json is a format of storing data which makes it easy for the computer to read. It is
+made up of `key: value` pairs. Unless you know what you're doing you will only want to change the `value` portions of
+the data.
+
+1. Open the file: `config/site.json`
+2. Change the values to whatever you want, e.g.
+    ```json
+    "title": "My new site title",
+    "shortTitle": "New site",
+    "description": "A short description of this new site",
+    ```
+3. Save the file
+
+_At this point, if you have the server running, the site should automatically update with your changes. You should see
+in your Terminal that everything has been regenerated with the new information. Otherwise you will need to run the site
+on your machine using the instructions above._
+
+A full description of the contents of `site.json` is available [in the tech docs][tech config_site]. 
+
 ### Create a new page
 - Steps to create a new page
   - Create html file in `pages/` folder
@@ -106,3 +125,7 @@ refresh the page it will show:
 [nodejs about]: https://nodejs.org/about/
 [nodejs home]: https://nodejs.org/
 [nvm home]: https://github.com/creationix/nvm
+[twitter s_l_i]: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image.html
+[opengraph]: http://ogp.me/
+
+[tech config_site]: /docs/tech.md#config_site

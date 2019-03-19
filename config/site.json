@@ -4,9 +4,9 @@
     "shortTitle": "Gravity and Metalsmith",
     "description": "Metalsmith generated website; including Gravity and other Buildit best practises",
     "twitterCard": "summary_large_image",
-    "twitterSiteId": "enter-siteId-here",
+    "twitterSiteId": "@buildit_tech",
     "ogType": "website",
     "ogImage": "builidt-default-sharing-img.png",
-    "ogImageAlt": "Buildit @ Wipro Digital"
+    "ogImageAlt": "buildit @ wipro digital"
   }
 }
