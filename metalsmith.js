@@ -1,5 +1,5 @@
 const Metalsmith = require("metalsmith");
-const ms = Metalsmith(__dirname);
+let ms = Metalsmith(__dirname);
 const fsMetadata = require("metalsmith-fs-metadata");
 const path = require("metalsmith-path");
 const buildInfo = require("./lib/metalsmith-build-info");
@@ -27,15 +27,20 @@ ms.source("./pages")
       config: "./config/site.json"
     })
   )
+  .use(buildInfo())
+  .use(envInfo())
+  .use(collections())
+  .use(
+    inPlace({
+      suppressNoFilesError: true
+    })
+  )
   .use(
     path({
       directoryIndex: "/index.html",
       extensions: [".html"]
     })
   )
-  .use(buildInfo())
-  .use(envInfo())
-  .use(collections())
   .use(
     frontmatterFileLoader({
       key: "blocks-md",
@@ -63,11 +68,6 @@ ms.source("./pages")
       key: "blocks-njk",
       out: "blocks",
       ext: "njk",
-      suppressNoFilesError: true
-    })
-  )
-  .use(
-    inPlace({
       suppressNoFilesError: true
     })
   )
