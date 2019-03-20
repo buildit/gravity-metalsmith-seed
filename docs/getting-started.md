@@ -211,7 +211,7 @@ website._
 ### Accessibility Tests and Smoke Tests
 
 There is a script provided which will run Accessibility Tests and Smoke Tests. This script relies on a local development
-server running at the time the tests are started.
+server running at the time the tests are started. This script will also lint your code.
 
 To run the tests you type `npm test` in your Terminal window.
 
@@ -221,10 +221,14 @@ Terminal windows open - one to run the development server and one to run the tes
 **Accessibility Tests** are a suite of computer run tests which check if the colours used on the site are suitable for
 audiences which might include users with visual impairments. If these fail then you should check the output to see what
 issues your site has.
+
 **Smoke Tests** are a couple of important computer run tests which check that certain important files are being
 generated correctly. If these fail then it usually means a change that's been made has broken the generation of the
 website. The output should tell you which file is failing and you can then check that file exists within the `dist/`
 folder and look at it's contents to see if you can spot what is wrong.
+
+**Linting** is the process of checking that coding style meets certain guidelines. This means that files in the `src/`
+folder have to meet certain standards of code.
 
 ### CI/CD (Continuous Integration/Continuous Deployment)
 
