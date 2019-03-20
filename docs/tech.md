@@ -25,7 +25,7 @@
 
 <a name="gravity"/>
 
-## Gravity
+## Gravity - [link][gravity home]
 
 Gravity is Buildit's design system.
 
@@ -36,7 +36,7 @@ system for consistency and future proof brand alignment.
 
 <a name="gulp"/>
 
-## Gulp
+## Gulp - [link][gulp home]
 
 Gulp is a build system.
 
@@ -49,7 +49,7 @@ kicking off the Metalsmith build, compiling css and javascript, and many other t
 
 <a name="metalsmith"/>
 
-## Metalsmith
+## Metalsmith - [link][metalsmith home]
 
 Metalsmith is a static site generator.
 
@@ -263,3 +263,6 @@ Here is a description of each of the settings you can change in `site.json`:
 [mplugin mbeaut]: https://github.com/boushley/metalsmith-beautify
 [mplugin mdrafts]: https://github.com/segmentio/metalsmith-drafts
 [mplugin mmap]: https://github.com/quercy/metalsmith-mapsite
+[gravity home]: https://github.com/buildit/gravity-ui-sass
+[gulp home]: https://gulpjs.com/
+[metalsmith home]: https://metalsmith.io/
