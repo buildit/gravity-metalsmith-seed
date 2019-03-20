@@ -1,67 +1,127 @@
 # Tech
-*TODO: Expand on each item in this list with relevant info*
 
-*Each topic should answer "What?", and "Why?"*
- 
 - Gravity
-  - What
-  - Why
 - Gulp
-  - What
-  - Why
 - Metalsmith
-  - What
-  - Why
   - Plugins
-    - metalsmith-fs-metadata
-    - metalsmith-path
-    - ./lib/metalsmith-build-info
-    - ./lib/metalsmith-env-info
-    - metalsmith-collections
-    - metalsmith-frontmatter-file-loader
-    - metalsmith-frontmatter-renderer
-    - metalsmith-in-place
-    - metalsmith-layouts
-    - metalsmith-beautify
-    - metalsmith-drafts
-    - ./lib/metalsmith-html-minifier-optimise
-    - ./lib/metalsmith-mapsite-currentenv
 - Nunjucks
-  - What
-  - Why
-  - See layouts?
 - Markdown
-  - What
-  - Why
-  - See content?
 - pa11y
-  - What
-  - Why
-  - Accessibility tests out the box
 - Cypress
-  - What
-  - Why
-  - Smoke tests out the box
 - Browsersync
-  - What
-  - Why
-  - Local development
 - Linting
-  - What
-  - Why
-  - eslint
-  - stylelint
 - Sass compilation
-  - src folder explaination?
-- Scripts compilation
-  - src folder explaination?
 - Sitemap
-  - What
-  - Why
-- Config
+- Config folder
+  - [Site](#config_site)
   - Environments
-    - How to run
-  - Site
+- Robots
+- Pages folder
+- Layout folder
+- Content folder
+- Static folder
+  - Icons
+- Google Tag Manager
+
+## Gravity
+
+- What
+- Why
+
+## Gulp
+
+- What
+- Why
+
+## Metalsmith
+
+- What
+- Why
+
+### Plugins
+
+#### metalsmith-fs-metadata
+
+#### metalsmith-path
+
+#### ./lib/metalsmith-build-info
+
+#### ./lib/metalsmith-env-info
+
+#### metalsmith-collections
+
+#### metalsmith-frontmatter-file-loader
+
+#### metalsmith-frontmatter-renderer
+
+#### metalsmith-in-place
+
+#### metalsmith-layouts
+
+#### metalsmith-beautify
+
+#### metalsmith-drafts
+
+#### ./lib/metalsmith-html-minifier-optimise
+
+#### ./lib/metalsmith-mapsite-currentenv
+  
+## Nunjucks
+
+- What
+- Why
+
+### See layouts?
+
+## Markdown
+
+- What
+- Why
+
+### See content?
+
+## pa11y
+
+- What
+- Why
+
+### Accessibility tests out the box
+
+## Cypress
+
+- What
+- Why
+
+### Smoke tests out the box
+
+## Browsersync
+
+- What
+- Why
+
+### Local development
+
+## Linting
+
+- What
+- Why
+
+### eslint
+
+### stylelint
+
+## Sass compilation
+
+### src folder explaination?
+
+## Scripts compilation
+
+### src folder explaination?
+
+## Sitemap
+
+- What
+- Why
 
 ## Config folder: `config/`
 
@@ -82,26 +142,32 @@ Here is a description of each of the settings you can change in `site.json`:
 - `twitterSiteId` - This is the `@username` twitter username for your site.
 - `ogType` - This is the [Open Graph](opengraph) object type. This should probably stay as `"website"` unless you know
   what you're doing.
-- `ogImage` - This is the [Open Graph](opengraph) image. When a user shares your site on a platform that supports open
+- `ogImage` - This is the path to the [Open Graph](opengraph) image. When a user shares your site on a platform that supports open
   graph this image will be used to decorate that post/message. 
 - `ogImageAlt` - This is the [Open Graph](opengraph) image alt text. This alt text is attached to the image for users
   who require the image describing to them. For example, visually impaired users.
 
 ### Environments: `config/envs.json`
-What an environment is.
-What each environment is.
-How to run each environment.
+- What an environment is.
+- What each environment is.
+- How to run each environment.
  
+## Robots
 
-- Robots
-  - What
-  - Why
-- Pages folder
-- Layouts folder
-- Content folder
-- Static folder
-  - Icons
-- Google Tag Manager
-  - What
-  - Why
-  
+- What
+- Why
+
+## Pages folder
+
+## Layouts folder
+
+## Content folder
+
+## Static folder
+
+### Icons
+
+## Google Tag Manager
+
+- What
+- Why

@@ -64,8 +64,8 @@ Your CI system should run `npm run ci` to build, lint and test.
 http-server` to do this - your CI system should have documentation on where to run this command.*  
 
 [gravity home]: https://github.com/buildit/gravity-ui-sass
-[gettingstarted docs]: getting-started.md
-[tech docs]: tech.md
+[gettingstarted docs]: docs/getting-started.md
+[tech docs]: docs/tech.md
 [download]: https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip
 [buildstatus image]: https://travis-ci.org/buildit/gravity-metalsmith-shell.svg?branch=master
 [buildstatus url]: https://travis-ci.org/buildit/gravity-metalsmith-shell
