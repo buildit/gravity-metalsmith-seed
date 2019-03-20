@@ -1,13 +1,18 @@
 # Getting Started
 
-So, you want to create a static site powered by Gravity - Buildit's design system.
+So, you want to create a static site powered by [Gravity][gravity home] - Buildit's design system.
 
 This guide will give you some basics on how to use what's here, and some topics you can research if you want to go that
 bit further.
 
+_If you want to know what a "design system" is, then you could read [this article][wtfdesignsystem]._
+
+_If you want an introduction to Gravity as a design system specifically then we've got [an article][gravity about] for
+that too!_
+
 ## Tech
 
-Here's a quick introduction to the main tech in use. There's more info in the [tech][tech docs] docs.
+This is a quick introduction to the main tech in use. There's more detailed info in the [tech][tech docs] docs.
 
 ### Gravity - [link][gravity home]
 
@@ -249,7 +254,9 @@ in touch internally. Everyone is welcome to ask general questions or to get help
 [on Github][github issues]. 
 
 [tech docs]: tech.md
+[wtfdesignsystem]: https://medium.com/buildit/design-systems-wtf-42956f673250
 [gravity home]: https://github.com/buildit/gravity-ui-sass
+[gravity about]: https://medium.com/buildit/introducing-buildits-gravity-design-system-44c3fe7a1d26
 [metalsmith home]: https://metalsmith.io/
 [nodejs about]: https://nodejs.org/about/
 [nodejs home]: https://nodejs.org/
@@ -259,7 +266,6 @@ in touch internally. Everyone is welcome to ask general questions or to get help
 [travis home]: https://travis-ci.org/
 [buildit home]: https://buildit.wiprodigital.com/
 [github issues]: https://github.com/buildit/gravity-metalsmith-shell/issues
-
 [tech config_site]: /docs/tech.md#config_site
 
 ---

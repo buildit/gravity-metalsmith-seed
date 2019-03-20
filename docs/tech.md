@@ -29,10 +29,12 @@
 
 Gravity is Buildit's design system.
 
-To find out what a "design system" is you can [read this article].
+This shell was built primarily to allow rapid creation of websites (internal/external) which use Buildit's design system
+for consistency and future proof brand alignment.
 
-This shell was built primarily to allow rapid creation of websites (internal/external) which use the Buildit design
-system for consistency and future proof brand alignment.
+To find out what a "design system" is you can read [this article][wtfdesignsystem].
+
+To get an introduction to Gravity as a design system specifically then read [this article][gravity about].
 
 <a name="gulp"/>
 
@@ -264,5 +266,12 @@ Here is a description of each of the settings you can change in `site.json`:
 [mplugin mdrafts]: https://github.com/segmentio/metalsmith-drafts
 [mplugin mmap]: https://github.com/quercy/metalsmith-mapsite
 [gravity home]: https://github.com/buildit/gravity-ui-sass
+[gravity about]: https://medium.com/buildit/introducing-buildits-gravity-design-system-44c3fe7a1d26
 [gulp home]: https://gulpjs.com/
 [metalsmith home]: https://metalsmith.io/
+[wtfdesignsystem]: https://medium.com/buildit/design-systems-wtf-42956f673250
+[buildit home]: https://buildit.wiprodigital.com/
+
+---
+
+made with ❤ -  [Buildit][buildit home]

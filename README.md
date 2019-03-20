@@ -1,6 +1,9 @@
 # Gravity & Metalsmith Shell - [![Build Status][buildstatus image]][buildstatus url]
 
-This shell can be used as a base to quickly create your own static site with [Gravity](gravity home).
+**Quickly create your own static site powered by [Gravity][gravity home]!**
+
+The primary purpose of this shell is to allow rapid creation of websites (internal or external) - which use Buildit's
+design system for consistency and future proofed brand alignment.
 
 - **[Getting Started documentation][gettingstarted docs]**
   
@@ -17,7 +20,6 @@ This shell can be used as a base to quickly create your own static site with [Gr
 There are more instructions in the [Getting Started][gettingstarted docs] docs.
 
 - Node v8.10.0 or higher is required.
-
 
 ### Installation
 
@@ -69,3 +71,8 @@ http-server` to do this - your CI system should have documentation on where to r
 [download]: https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip
 [buildstatus image]: https://travis-ci.org/buildit/gravity-metalsmith-shell.svg?branch=master
 [buildstatus url]: https://travis-ci.org/buildit/gravity-metalsmith-shell
+[buildit home]: https://buildit.wiprodigital.com/
+
+---
+
+made with ❤ -  [Buildit][buildit home]
