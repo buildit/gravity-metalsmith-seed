@@ -1,11 +1,13 @@
 # Gravity & Metalsmith Shell - [![Build Status][buildstatus image]][buildstatus url]
 
-**Quickly create your own static site powered by [Gravity][gravity home]!**
+_Quickly create your own static site powered by [Gravity][gravity home]!_
 
 The primary purpose of this shell is to allow rapid creation of websites (internal or external) - which use Buildit's
 design system for consistency and future proofed brand alignment.
 
 - **[Getting Started documentation][gettingstarted docs]**
+
+  **This is where you should start if you don't know where else to start!**
   
   Follow this documentation to understand more about this project and how to install, run and create new content for a
   site generated using it. This documentation is geared towards a wide audience.
