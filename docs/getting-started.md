@@ -162,7 +162,9 @@ title: My new page
 </code></pre>
 
 There's one final method for content which is to store it in another file. Take a look at the existing
-`pages/index.html` to see how that is achieved with the `blocks` frontmatter.
+`pages/index.html` to see how that is achieved with the `blocks` frontmatter. It uses an external file in the `content/`
+folder and renders that file into the `main` block (which is a part of the Basic Page layout you specified in your
+frontmatter).
 
 ### Adding a page to the navigation
 
@@ -179,17 +181,68 @@ quickly add that page to the navigation links in your page header.
 That's it. The page should now appear in the main nav. It's frontmatter `title` will be used as the link text.
    
 ### Add images and other content
-- Steps to add static assets and images
-- Steps to add markdown content
+
+When you want to add files to your site which are static - ie they're an image/video/audio file, or a file that never
+changes like a downloadable zip - they should be placed in the `static/` folder. These will get copied to the root of
+your website.
+
+So a file in the root of `static/` will appear at the root of your website. e.g. `static/image.png` would be at
+`/image.png` in the generated website (remember the forward slash at the start of this website path). This is the path
+you would use when specifying the image path in content and html. 
+
+#### Image optimisation
+
+There is a special folder at `/static/images`. This folder is special because a script is run to optimise all image
+files placed within this folder when the copy is made for the website. Optimisation just reduces the file size and
+should not affect the quality of the images.
+
+The path of these files on the resulting website follows the same behaviour as mentioned above. A file at
+`static/images/image.png` will be optimised and available at a website path of `/images/image.png`. 
 
 ## Publishing the site (Deployment)
-- What you need to deploy
-- (?) Best practises such as CI/CD
+
+The website files get generated into a folder called `dist/`. This folder is what the local web server uses as it's root
+folder. It follows that to deploy the website the contents of this folder need to be copied in to root folder of the
+server hosting your website.
+
+_If you do not have any hosting then I would suggest you talk to one of the development team about how to host a static
+website._
+
+### Accessibility Tests and Smoke Tests
+
+There is a script provided which will run Accessibility Tests and Smoke Tests. This script relies on a local development
+server running at the time the tests are started.
+
+To run the tests you type `npm test` in your Terminal window.
+
+_If you don't have a development server running (see above) then you should run one first. You might need to have two
+Terminal windows open - one to run the development server and one to run the tests whilst that server is running._
+
+**Accessibility Tests** are a suite of computer run tests which check if the colours used on the site are suitable for
+audiences which might include users with visual impairments. If these fail then you should check the output to see what
+issues your site has.
+**Smoke Tests** are a couple of important computer run tests which check that certain important files are being
+generated correctly. If these fail then it usually means a change that's been made has broken the generation of the
+website. The output should tell you which file is failing and you can then check that file exists within the `dist/`
+folder and look at it's contents to see if you can spot what is wrong.
+
+### CI/CD (Continuous Integration/Continuous Deployment)
+
+There is a script provided for CI servers to use. If you don't have CI/CD set up then, as it's a bigger topic, i'd
+suggest asking one of the development team what their thoughts are on setting one up.
+
+If you do have CI then you can run `npm run ci`. Note that this relies on a webserver being run for the tests to work.
+The file `.travis.yml` is an example of how this generator runs it's own tests on [Travis CI][travis home].
 
 ## Where to go from here
-- Further reading
-- Other topics that might be important
-- How to get help
+
+- You could read more detail about the tech in use in the [tech docs][tech docs].
+- You could learn more about [Gravity][gravity home]!
+- You could look in to learning more about [Metalsmith][metalsmith home].
+
+This shell has been built by your team at [Buildit][buildit home]. If you're in the Wipro family then feel free to get
+in touch internally. Everyone is welcome to ask general questions or to get help - you can open an issue
+[on Github][github issues]. 
 
 [tech docs]: tech.md
 [gravity home]: https://github.com/buildit/gravity-ui-sass
@@ -199,5 +252,12 @@ That's it. The page should now appear in the main nav. It's frontmatter `title` 
 [nvm home]: https://github.com/creationix/nvm
 [twitter s_l_i]: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image.html
 [opengraph]: http://ogp.me/
+[travis home]: https://travis-ci.org/
+[buildit home]: https://buildit.wiprodigital.com/
+[github issues]: https://github.com/buildit/gravity-metalsmith-shell/issues
 
 [tech config_site]: /docs/tech.md#config_site
+
+---
+
+made with ❤ -  [Buildit][buildit home]
