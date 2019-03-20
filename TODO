@@ -4,7 +4,8 @@
 -[x] smoke tests
 -[x] `npm run test`
 -[x] `npm run ci` for CI environments (or different build tasks for different envs)
--[ ] list of things opinionated about
--[ ] getting started guide 
--[ ] Generator
+-[ ] tech guide
+-[x] getting started guide 
+-[ ] generator
 -[ ] Image/Icon generation
+-[ ] Greenkeeper (keep Gravity dependency up to date)
