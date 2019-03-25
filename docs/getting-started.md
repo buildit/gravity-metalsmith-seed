@@ -1,6 +1,6 @@
 # Getting Started
 
-So, you want to create a static site powered by [Gravity][gravity home] - Buildit's design system.
+So, you want to create a website powered by [Gravity][gravity home] - Buildit's design system.
 
 This guide will give you some basics on how to use what's here, and some topics you can research if you want to go that
 bit further.
@@ -10,9 +10,30 @@ _If you want to know what a "design system" is, then you could read [this articl
 _If you want an introduction to Gravity as a design system specifically then we've got [an article][gravity about] for
 that too!_
 
+## Tools
+
+You will need:
+
+- A code editor. [Atom][atom download] is a good choice.
+- A web browser.
+- Knowledge of Terminal or Command Prompt.
+
+  Terminal is an application that comes pre-installed on Mac computers. You can run it by pressing [Cmd + Space], then
+  typing 'Terminal'. Or you can open it from your Applications folder. You can read [this article][terminal help] to
+  find out how to change folders so that you can open Terminal in the folder your unzipped files are in.
+  
+  Command Prompt is an application that comes pre-installed on Windows computers. You can run it by pressing the
+  [windows key + r], then typing 'cmd'. You can read [this article][cmdprompt help] to find out how to change folders so
+  that you can open Command Prompt in the folder your unzipped files are in.
+  
+  _Note: the rest of the docs refer to Terminal, but if you're on Windows then you should use Command Prompt instead._
+
 ## Tech
 
 This is a quick introduction to the main tech in use. There's more detailed info in the [tech][tech docs] docs.
+
+If you want to get going and the tech is not that important to you then move on to the Installation instructions that
+follow!
 
 ### Gravity - [link][gravity home]
 
@@ -33,14 +54,23 @@ this will allow you to make more advanced changes.
 
 ### NPM
 
-You will need to install NPM to run commands which control this generator. The instructions are in the
-next section but all you need to know is that once installed you will need to enter commands in Terminal (comes
-preinstalled on mac) which start with the word `npm`. Those commands start different processes which you will need to
-develop and run your site.
+You will need to install NPM to run commands which control this shell. The instructions are in the next section but
+all you need to know is that once installed you will need to enter commands in Terminal which start with the word `npm`.
 
 ## Installation
 
-This generator uses a program called NPM (Node Package Manager) to keep a track of any other software that it relies on.
+### Download the shell
+
+[Download the shell from Github.][download]
+
+This will download a zip archive containing all the files and folders that make up the Gravity & Metalsmith Shell.
+
+You should unzip this archive somewhere on your computer. The folder you unzip this archive to will be the folder you
+want Terminal to be open in.
+
+### NPM
+
+This shell uses a program called NPM (Node Package Manager) to keep a track of any other software that it relies on.
 These are called dependencies.
 
 You might have NPM installed - in which case you can move on to "Running the site".
@@ -65,13 +95,12 @@ Node JS provide installers for many operating systems on their website.
 #### Installing dependencies
 
 Once NPM is installed (or if it's already available) you can run the following command to install all of this
-generator's dependencies:
+shell's dependencies:
 ```
 npm install
 ```
-Note that this command has to be run in the folder where you've put the files from this shell. For instructions on how
-to change folder in Terminal (or check which folder you're in) see
-[this article](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html).
+Note that this command, and all `npm` commands, has to be run in the folder where you've put the files from this shell.
+You can see the section above "Tools" for links to articles to help with how to do that.
 
 ## Running the site on your machine
 
@@ -80,14 +109,14 @@ whatever platform your audience will view it on.
 
 This is called "Running the site locally", where locally indicates your machine. You will be able to open your browser
 and go to a special URL where your local site is running. Usually these local URLs begin with `localhost`. You'll see
-that's true for this generator too.
+that's true for this shell too.
 
-The quickest way to run your site locally is to run the command `npm start` from within the folder you put the files for
-this shell. This should take a few seconds to complete and when it completes it will automatically open a webpage in
-your browser. The URL of that webpage will be something like `http://localhost:8081/` and as long as you keep that
-Terminal/Command Prompt window open then the site will be available. If you close the Terminal window (or you can end
-the running task by pressing `cmd + c` [`ctrl + c` on windows]) then the site will no longer be running and if you
-refresh the page it will show:
+The quickest way to run your site locally is to run the command `npm start` in Terminal. Terminal should be in the
+folder you unzipped the files for this shell. This should take a few seconds to complete and when it completes it will
+automatically open a webpage in your browser. The URL of that webpage will be something like `http://localhost:8080/`
+and as long as you keep that Terminal/Command Prompt window open then the site will be available. If you close the
+Terminal window (or you can end the running task by pressing `cmd + c` [`ctrl + c` on windows]) then the site will no
+longer be running and if you refresh the page it will show:
 > This site can’t be reached
 
 ## Making changes
@@ -122,7 +151,9 @@ Now let's add a new page to your site.
 
 1. Create a new `.html` file within the `pages/` folder.
   
-    _The file can be called whatever you want, but a good way of organising your pages is to create a sub-folder witin `pages/` and create a file called `index.html` within that. This has the benefit of nice looking URLs to your new page._
+    _The file can be called whatever you want, but a good way of organising your pages is to create a sub-folder witin
+    `pages/` and create a file called `index.html` within that. This has the benefit of nice looking URLs to your new
+    page._
   
     _e.g. Create a file called `pages/my-new-page/index.html` and you would be able to load it in a browser at
     `http://.../my-new-page/`._
@@ -241,7 +272,7 @@ There is a script provided for CI servers to use. If you don't have CI/CD set up
 suggest asking one of the development team what their thoughts are on setting one up.
 
 If you do have CI then you can run `npm run ci`. Note that this relies on a webserver being run for the tests to work.
-The file `.travis.yml` is an example of how this generator runs it's own tests on [Travis CI][travis home].
+The file `.travis.yml` is an example of how this shell runs it's own tests on [Travis CI][travis home].
 
 ## Where to go from here
 
@@ -267,6 +298,10 @@ in touch internally. Everyone is welcome to ask general questions or to get help
 [buildit home]: https://buildit.wiprodigital.com/
 [github issues]: https://github.com/buildit/gravity-metalsmith-shell/issues
 [tech config_site]: /docs/tech.md#config_site
+[atom download]: https://atom.io/
+[terminal help]: https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html
+[cmdprompt help]: https://www.digitalcitizen.life/command-prompt-how-use-basic-commands
+[download]: https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip
 
 ---
 
