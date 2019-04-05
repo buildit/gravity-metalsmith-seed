@@ -29,7 +29,7 @@
 
 Gravity is Buildit's design system.
 
-This shell was built primarily to allow rapid creation of websites (internal/external) which use Buildit's design system
+This seed was built primarily to allow rapid creation of websites (internal/external) which use Buildit's design system
 for consistency and future proof brand alignment.
 
 To find out what a "design system" is you can read [this article][wtfdesignsystem].

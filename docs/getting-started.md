@@ -54,23 +54,23 @@ this will allow you to make more advanced changes.
 
 ### NPM
 
-You will need to install NPM to run commands which control this shell. The instructions are in the next section but
+You will need to install NPM to run commands which control this seed. The instructions are in the next section but
 all you need to know is that once installed you will need to enter commands in Terminal which start with the word `npm`.
 
 ## Installation
 
-### Download the shell
+### Download the seed
 
-[Download the shell from Github.][download]
+[Download the seed from Github.][download]
 
-This will download a zip archive containing all the files and folders that make up the Gravity & Metalsmith Shell.
+This will download a zip archive containing all the files and folders that make up the Gravity & Metalsmith Seed.
 
 You should unzip this archive somewhere on your computer. The folder you unzip this archive to will be the folder you
 want Terminal to be open in.
 
 ### NPM
 
-This shell uses a program called NPM (Node Package Manager) to keep a track of any other software that it relies on.
+This seed uses a program called NPM (Node Package Manager) to keep a track of any other software that it relies on.
 These are called dependencies.
 
 You might have NPM installed - in which case you can move on to "Running the site".
@@ -95,11 +95,11 @@ Node JS provide installers for many operating systems on their website.
 #### Installing dependencies
 
 Once NPM is installed (or if it's already available) you can run the following command to install all of this
-shell's dependencies:
+seed's dependencies:
 ```
 npm install
 ```
-Note that this command, and all `npm` commands, has to be run in the folder where you've put the files from this shell.
+Note that this command, and all `npm` commands, has to be run in the folder where you've put the files from this seed.
 You can see the section above "Tools" for links to articles to help with how to do that.
 
 ## Running the site on your machine
@@ -109,10 +109,10 @@ whatever platform your audience will view it on.
 
 This is called "Running the site locally", where locally indicates your machine. You will be able to open your browser
 and go to a special URL where your local site is running. Usually these local URLs begin with `localhost`. You'll see
-that's true for this shell too.
+that's true for this seed too.
 
 The quickest way to run your site locally is to run the command `npm start` in Terminal. Terminal should be in the
-folder you unzipped the files for this shell. This should take a few seconds to complete and when it completes it will
+folder you unzipped the files for this seed. This should take a few seconds to complete and when it completes it will
 automatically open a webpage in your browser. The URL of that webpage will be something like `http://localhost:8080/`
 and as long as you keep that Terminal/Command Prompt window open then the site will be available. If you close the
 Terminal window (or you can end the running task by pressing `cmd + c` [`ctrl + c` on windows]) then the site will no
@@ -272,7 +272,7 @@ There is a script provided for CI servers to use. If you don't have CI/CD set up
 suggest asking one of the development team what their thoughts are on setting one up.
 
 If you do have CI then you can run `npm run ci`. Note that this relies on a webserver being run for the tests to work.
-The file `.travis.yml` is an example of how this shell runs it's own tests on [Travis CI][travis home].
+The file `.travis.yml` is an example of how this seed runs it's own tests on [Travis CI][travis home].
 
 ## Where to go from here
 
@@ -280,7 +280,7 @@ The file `.travis.yml` is an example of how this shell runs it's own tests on [T
 - You could learn more about [Gravity][gravity home]!
 - You could look in to learning more about [Metalsmith][metalsmith home].
 
-This shell has been built by your team at [Buildit][buildit home]. If you're in the Wipro family then feel free to get
+This seed has been built by your team at [Buildit][buildit home]. If you're in the Wipro family then feel free to get
 in touch internally. Everyone is welcome to ask general questions or to get help - you can open an issue
 [on Github][github issues]. 
 
@@ -296,12 +296,12 @@ in touch internally. Everyone is welcome to ask general questions or to get help
 [opengraph]: http://ogp.me/
 [travis home]: https://travis-ci.org/
 [buildit home]: https://buildit.wiprodigital.com/
-[github issues]: https://github.com/buildit/gravity-metalsmith-shell/issues
+[github issues]: https://github.com/buildit/gravity-metalsmith-seed/issues
 [tech config_site]: /docs/tech.md#config_site
 [atom download]: https://atom.io/
 [terminal help]: https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html
 [cmdprompt help]: https://www.digitalcitizen.life/command-prompt-how-use-basic-commands
-[download]: https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip
+[download]: https://github.com/buildit/gravity-metalsmith-seed/archive/master.zip
 
 ---
 
