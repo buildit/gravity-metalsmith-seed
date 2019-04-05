@@ -265,7 +265,7 @@ Here is a description of each of the settings you can change in `site.json`:
 [mplugin mbeaut]: https://github.com/boushley/metalsmith-beautify
 [mplugin mdrafts]: https://github.com/segmentio/metalsmith-drafts
 [mplugin mmap]: https://github.com/quercy/metalsmith-mapsite
-[gravity home]: https://github.com/buildit/gravity-ui-sass
+[gravity home]: https://github.com/buildit/gravity-ui-web
 [gravity about]: https://medium.com/buildit/introducing-buildits-gravity-design-system-44c3fe7a1d26
 [gulp home]: https://gulpjs.com/
 [metalsmith home]: https://metalsmith.io/
