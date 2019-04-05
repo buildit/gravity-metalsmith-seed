@@ -1,5 +1,5 @@
 {
-  "name": "gravity-metalsmith-shell",
+  "name": "gravity-metalsmith-seed",
   "version": "1.0.1",
   "description": "An \"opinionated minimum\" set of features to generate metalsmith sites with gravity.",
   "main": "index.js",
@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dw-buildit/gravity-metalsmith-shell.git"
+    "url": "git+https://github.com/dw-buildit/gravity-metalsmith-seed.git"
   },
   "license": "ISC",
   "engines": {

@@ -1,8 +1,8 @@
-# Gravity & Metalsmith Shell - [![Build Status][buildstatus image]][buildstatus url]
+# Gravity & Metalsmith Seed - [![Build Status][buildstatus image]][buildstatus url]
 
 _Quickly create your own static site powered by [Gravity][gravity home]!_
 
-The primary purpose of this shell is to allow rapid creation of websites (internal or external) - which use Buildit's
+The primary purpose of this seed is to allow rapid creation of websites (internal or external) - which use Buildit's
 design system for consistency and future proofed brand alignment.
 
 - **[Getting Started documentation][gettingstarted docs]**
@@ -70,9 +70,9 @@ http-server` to do this - your CI system should have documentation on where to r
 [gravity home]: https://github.com/buildit/gravity-ui-sass
 [gettingstarted docs]: docs/getting-started.md
 [tech docs]: docs/tech.md
-[download]: https://github.com/buildit/gravity-metalsmith-shell/archive/master.zip
-[buildstatus image]: https://travis-ci.org/buildit/gravity-metalsmith-shell.svg?branch=master
-[buildstatus url]: https://travis-ci.org/buildit/gravity-metalsmith-shell
+[download]: https://github.com/buildit/gravity-metalsmith-seed/archive/master.zip
+[buildstatus image]: https://travis-ci.org/buildit/gravity-metalsmith-seed.svg?branch=master
+[buildstatus url]: https://travis-ci.org/buildit/gravity-metalsmith-seed
 [buildit home]: https://buildit.wiprodigital.com/
 
 ---
