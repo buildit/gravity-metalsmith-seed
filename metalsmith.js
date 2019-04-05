@@ -1,7 +1,7 @@
 const Metalsmith = require("metalsmith");
 let ms = Metalsmith(__dirname);
 const fsMetadata = require("metalsmith-fs-metadata");
-const path = require("metalsmith-path");
+const pathNoIndex = require("./lib/metalsmith-path-noindex");
 const buildInfo = require("./lib/metalsmith-build-info");
 const envInfo = require("./lib/metalsmith-env-info");
 const collections = require("metalsmith-collections");
@@ -35,12 +35,7 @@ ms.source("./pages")
       suppressNoFilesError: true
     })
   )
-  .use(
-    path({
-      directoryIndex: "/index.html",
-      extensions: [".html"]
-    })
-  )
+  .use(pathNoIndex())
   .use(
     frontmatterFileLoader({
       key: "blocks-md",

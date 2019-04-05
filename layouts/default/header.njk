@@ -22,7 +22,7 @@
     <ul>
       {% for navItem in colMainNav %}
       <li>
-        <a class="grav-c-nav-link" href="/{{ navItem.path | replace("index.html", "") }}">{{ navItem.title }}</a>
+        <a class="grav-c-nav-link" href="/{{ navItem.path }}">{{ navItem.title }}</a>
       </li>
       {% endfor %}
     </ul>

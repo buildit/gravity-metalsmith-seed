@@ -1,7 +1,7 @@
 <ul class="grav-c-list-img-cards">
 {% for article in colArticle %}
   <li>
-    <a href="/{{ article.path | replace("index.html", "") }}">
+    <a href="/{{ article.path }}">
       <img src="{{ article.image.src }}" alt="{{ article.image.alt }}"/>
       <h3 class="grav-c-list-img-cards__title">{{ article.title }}</h3>
     </a>
