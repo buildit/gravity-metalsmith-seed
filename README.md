@@ -67,7 +67,7 @@ Your CI system should run `npm run ci` to build, lint and test.
 *Note that your CI system of choice should also run a local webserver before running these tests. You can use `npm run
 http-server` to do this - your CI system should have documentation on where to run this command.*  
 
-[gravity home]: https://github.com/buildit/gravity-ui-sass
+[gravity home]: https://github.com/buildit/gravity-ui-web
 [gettingstarted docs]: docs/getting-started.md
 [tech docs]: docs/tech.md
 [download]: https://github.com/buildit/gravity-metalsmith-seed/archive/master.zip

@@ -4,4 +4,4 @@
 
 > Congratulations! This is the start of your Metalsmith generated static site with Buildit's design system - [Gravity][1] - built in!
 
-[1]: https://github.com/buildit/gravity-ui-sass
+[1]: https://github.com/buildit/gravity-ui-web

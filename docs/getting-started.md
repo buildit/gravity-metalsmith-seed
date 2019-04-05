@@ -286,7 +286,7 @@ in touch internally. Everyone is welcome to ask general questions or to get help
 
 [tech docs]: tech.md
 [wtfdesignsystem]: https://medium.com/buildit/design-systems-wtf-42956f673250
-[gravity home]: https://github.com/buildit/gravity-ui-sass
+[gravity home]: https://github.com/buildit/gravity-ui-web
 [gravity about]: https://medium.com/buildit/introducing-buildits-gravity-design-system-44c3fe7a1d26
 [metalsmith home]: https://metalsmith.io/
 [nodejs about]: https://nodejs.org/about/
