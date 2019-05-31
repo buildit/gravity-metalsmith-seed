@@ -1,0 +1,12 @@
+<article class="grav-o-container grav-c-article">
+  <header class="grav-c-page-intro">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    {% if image %}
+      <img src="{{ image.src }}" alt="{{ image.alt }}" />
+    {% endif %}
+  </header>
+  <div class="grav-c-ostentatious-copy">
+    {{ blocks.content | safe }}
+  </div>
+</article>
