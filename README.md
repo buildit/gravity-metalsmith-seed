@@ -28,7 +28,7 @@ There are more instructions in the [Getting Started][gettingstarted docs] docs.
 Most of the time you will want to take a copy of this code base and use it as a starting point for your own project.
 
 1. [Download the source files from GitHub][download]
-1. Unzip the files into your project directory
+1. Unzip the files into your project directory (this must be a git repo, with an inital commit)
 1. `npm install` in that directory
 
 ### Build, Development & Testing
