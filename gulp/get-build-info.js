@@ -8,7 +8,12 @@ let commitInfo = null;
 
 async function getCommitInfo() {
   if (commitInfo === null) {
-    commitInfo = await promisify(git.getLastCommit)();
+    try {
+      commitInfo = await promisify(git.getLastCommit)();
+    } catch (e) {
+      // no previous commit
+      commitInfo = {};
+    }
   }
   return commitInfo;
 }
@@ -35,11 +40,15 @@ module.exports = async function() {
   }
 
   const commitInfo = await getCommitInfo();
-  bldInfo.commitHash = commitInfo.hash;
-  bldInfo.commitShortHash = commitInfo.shortHash;
-  bldInfo.commitGithubUrl = `https://github.com/buildit/gravity-metalsmith-seed/commit/${
-    commitInfo.hash
-  }`;
+  bldInfo.commitHash = commitInfo.hash || "n/a";
+  bldInfo.commitShortHash = commitInfo.shortHash || "n/a";
+  if (commitInfo.hash) {
+    bldInfo.commitGithubUrl = `https://github.com/buildit/gravity-metalsmith-seed/commit/${
+      commitInfo.hash
+    }`;
+  } else {
+    bldInfo.commitGithubUrl = "n/a";
+  }
 
   return bldInfo;
 };

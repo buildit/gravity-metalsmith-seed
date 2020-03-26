@@ -3,6 +3,7 @@
     "url": "http://localhost:8080",
     "excludeRobots": true,
     "optimise": false,
+    "debugCss": true,
     "gtm": {
       "containerId": "GTM-5HD3WXB",
       "authId": "UZwrBZ2wxRUy5NTsN5397A",
@@ -13,6 +14,7 @@
     "url": "http://localhost:8080",
     "excludeRobots": true,
     "optimise": true,
+    "debugCss": true,
     "gtm": {
       "containerId": "",
       "authId": "",
@@ -23,6 +25,7 @@
     "url": "https://staging",
     "excludeRobots": true,
     "optimise": true,
+    "debugCss": false,
     "gtm": {
       "containerId": "",
       "authId": "",
@@ -33,6 +36,7 @@
     "url": "https://production",
     "excludeRobots": false,
     "optimise": true,
+    "debugCss": false,
     "gtm": {
       "containerId": "",
       "authId": "",

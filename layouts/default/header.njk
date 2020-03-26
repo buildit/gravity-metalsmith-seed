@@ -5,9 +5,9 @@
     {% else %}
       <h1>
     {% endif %}
-        <svg role="img" class="grav-c-logo" aria-label="Buildit @ Wipro Digital" width="300" height="33">
-          <title>buildit @ wipro digital</title>
-          <use xlink:href="#buildit-logotype"></use>
+        <svg role="img" class="grav-c-logotype" width="299" height="34">
+          <title>Buildit | Wipro Digital</title>
+          <use xlink:href="#logo-buildit-logotype"></use>
         </svg>
     {% if path %}
       </a>
@@ -21,9 +21,15 @@
   <nav class="grav-c-nav-menu">
     <ul>
       {% for navItem in colMainNav %}
-      <li>
-        <a class="grav-c-nav-link" href="/{{ navItem.path }}">{{ navItem.title }}</a>
-      </li>
+        <li>
+          <a
+            class="grav-c-nav-link"
+            {% if navItem.schema %}typeof="schema:{{ navItem.schema }}"{% endif %}
+            href="/{{ navItem.path }}"
+          >
+            {{ navItem.title }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </nav>

@@ -1,9 +1,5 @@
 {% if blocks.header %}
-    <header>
-        {{ blocks.header | safe }}
-    </header>
+  {{ blocks.header | safe }}
 {% else %}
-  <header>
-    {% include "default/header.njk" %}
-  </header>
+  {% include "default/header.njk" %}
 {% endif %}
