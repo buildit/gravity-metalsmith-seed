@@ -24,6 +24,7 @@ const eyeglass = require("eyeglass");
 const chalk = require("chalk");
 
 // config
+const gravityBldApi = require("@buildit/gravity-ui-web/build-api");
 const gulpConfig = require("./config/gulp.json");
 const paths = gulpConfig.paths;
 const envs = require("./gulp/envs.js");
@@ -70,12 +71,7 @@ function styles(done) {
     gulp
       .src(paths.styles.src)
       .pipe(sass(eyeglass(sassOptions)).on("error", sass.logError))
-      .pipe(
-        autoprefixer({
-          browsers: ["last 2 versions"],
-          cascade: false
-        })
-      )
+      .pipe(autoprefixer())
       .pipe(
         csso({
           restructure: optimise,
@@ -88,6 +84,18 @@ function styles(done) {
         done();
       });
   });
+}
+
+// Copy Gravity's debug.css to output, if required by environment config
+function copyDebugCss() {
+  if (envs.getCurrentEnvInfo().debugCss) {
+    return gulp
+      .src(gravityBldApi.distPath(gravityBldApi.distCssDebugFilename))
+      .pipe(gulp.dest(paths.styles.dest));
+  }
+  // Need to return a resolving promise so that this Gulp
+  // task completes cleanly.
+  return Promise.resolve();
 }
 
 // Grab static assets (fonts, etc.) and move them to the build folder
@@ -146,7 +154,7 @@ function watch(done) {
     gulp.series(
       "clean",
       metalsmithBuild,
-      gulp.parallel(assets, imageOptim, styles, scripts.bundle),
+      gulp.parallel(assets, imageOptim, styles, scripts.bundle, copyDebugCss),
       browserSync.reload
     )
   );
@@ -183,7 +191,7 @@ gulp.task(
     "clean",
     printBuildInfo,
     metalsmithBuild,
-    gulp.parallel(assets, imageOptim, styles, scripts.bundle),
+    gulp.parallel(assets, imageOptim, styles, scripts.bundle, copyDebugCss),
     criticalCss
   )
 );

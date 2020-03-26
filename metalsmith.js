@@ -16,6 +16,11 @@ const mapsiteCurrentenv = require("./lib/metalsmith-mapsite-currentenv");
 const gravityPaths = require("@buildit/gravity-ui-web/build-api");
 const fs = require("fs");
 
+const nunjucksJsTransformerOptions = {
+  html: true,
+  root: "layouts",
+};
+
 ms.source("./pages")
   .destination("./dist")
   .clean(false)
@@ -35,7 +40,8 @@ ms.source("./pages")
   .use(collections())
   .use(
     inPlace({
-      suppressNoFilesError: true
+      suppressNoFilesError: true,
+      engineOptions: nunjucksJsTransformerOptions,
     })
   )
   .use(pathNoIndex())
@@ -66,10 +72,13 @@ ms.source("./pages")
       key: "blocks-njk",
       out: "blocks",
       ext: "njk",
-      suppressNoFilesError: true
+      suppressNoFilesError: true,
+      options: nunjucksJsTransformerOptions,
     })
   )
-  .use(layouts())
+  .use(layouts({
+    engineOptions: nunjucksJsTransformerOptions,
+  }))
   .use(
     beautify({
       preserve_newlines: false
