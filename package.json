@@ -82,7 +82,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-closure-compiler-js": "github:dw-buildit/rollup-plugin-closure-compiler-js",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "stylelint": "^13.2.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.16.0"
